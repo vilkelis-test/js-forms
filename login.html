@@ -22,17 +22,10 @@
 				</div>
 			</div><a class="link" href="registration.html">Регистрация</a>
 		</div>
-		<form class="plate" action="success.html">
+		<form id="login-form" class="plate" action="success.html">
 			<div class="plate__heading">Вход на сайт</div>
-			<div class="error">Введите email</div>
-			<div class="error">Неверный формат email</div>
-			<div class="error">Введите пароль</div>
-			<div class="error error--with-desc">Неверный email или пароль</div>
-			<div class="error-description">
-				<p>Введите верные данные для входа или воспользуйтесь <a href="#">восстановлением пароля, </a>чтобы войти на сайт.</p>
-			</div>
-			<input class="input" type="text" placeholder="Введите имя" name="name"/>
-			<input class="input" type="password" placeholder="Пароль" name="password"/>
+			<input class="input" type="text" placeholder="Введите имя" name="name" data-error-text-empty="Введите email" data-error-text-format="Неверный формат email" data-valid-format="email"/>
+			<input class="input" type="password" placeholder="Пароль" name="password" data-error-text-empty="Введите пароль"/>
 			<div class="plate__links">
 				<label class="label form__label-checkbox">
 					<input class="form__input-checkbox" type="checkbox"/><span class="form__checkbox"> </span>Запомнить меня
@@ -46,6 +39,8 @@
 </div>
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/form-validator.js"></script>
+<script src="js/login-form-check.js"></script>
 <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>
